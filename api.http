@@ -20,4 +20,11 @@ title=foo
 ###
 DELETE http://localhost:3000/task/5ac2ae85-563e-499a-9381-3620e9b045e2 HTTP/1.1
 
+###
+
+PATCH  http://localhost:3000/task/ed14ba29-a01f-44c7-a469-ea04ef9da433/status HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+status=DONE
+
 
