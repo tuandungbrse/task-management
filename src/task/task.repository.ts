@@ -17,7 +17,8 @@ export class TaskRepository extends Repository<Task> {
   }
 
   public async deleteTaskById(id: string): Promise<void> {
-    return this.deleteTaskById(id);
+    const result = await this.delete(id);
+    console.log(result);
   }
 
   public async getAllTask(filterDto: GetTaskFilterDto): Promise<Task[]> {
