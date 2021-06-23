@@ -24,4 +24,10 @@ export class TaskService {
     this.tasks.push(task);
     return task;
   }
+
+  public deleteTaskById(id: string): Task {
+    const task = this.tasks.find((task) => task.id === id);
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+    return task;
+  }
 }
