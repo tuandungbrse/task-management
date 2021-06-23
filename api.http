@@ -14,8 +14,8 @@ GET http://localhost:3000/task/ae2d5b14-6584-4b7c-8944-fdbee3be85cb HTTP/1.1
 POST http://localhost:3000/task HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-title=
-&description=
+title=foo
+&description=bar
 
 ###
 DELETE http://localhost:3000/task/5ac2ae85-563e-499a-9381-3620e9b045e2 HTTP/1.1
