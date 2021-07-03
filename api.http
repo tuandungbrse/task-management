@@ -27,4 +27,12 @@ Content-Type: application/x-www-form-urlencoded
 
 status=DONE
 
+###
+
+POST http://localhost:3000/signup HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+title=foo
+&description=bar
+
 
