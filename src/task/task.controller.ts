@@ -9,6 +9,7 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/auth/get-user.decorator';
 import { User } from 'src/user/user.entity';
@@ -22,7 +23,10 @@ import { TaskService } from './task.service';
 @Controller('task')
 @UseGuards(AuthGuard())
 export class TaskController {
-  constructor(private readonly taskService: TaskService) {}
+  constructor(
+    private readonly taskService: TaskService,
+    private readonly configService: ConfigService,
+  ) {}
 
   @Get()
   public getTasks(
